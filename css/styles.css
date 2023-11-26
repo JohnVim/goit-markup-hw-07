@@ -17,7 +17,11 @@
 }
 
 .container {
-    width: 1158px;
+    /* width: 1158px; */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a {
@@ -374,7 +378,8 @@ nav .active {
     display: flex;
     justify-content: center;
     gap: 24px;
-    padding: 120px 156px;
+    padding: 120px 0px;
+    flex-wrap: wrap;
 }
 
 .about-icon {
@@ -403,12 +408,15 @@ nav .active {
 .team {
     padding-top: 120px;
     background-color: var(--CLOUD);
+    display: flex;
+    flex-direction: column;
 }
 
 .team-img {
     gap: 24px;
-    padding: 72px 156px;
+    padding: 72px 0px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -574,4 +582,34 @@ nav .active {
 .project-card-overlay p {
     padding: 40px 32px;
     text-align: justify;
+}
+
+/* CSS MEDIA QUERY */
+
+@media (min-width: 428px) {
+    .container {
+        width: 428px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+
+    .feature,
+    .team-img {
+        flex-basis: calc(100% / 2 - 30px);
+    }
+}
+
+@media (min-width: 1158px) {
+    .container {
+        width: 1158px;
+    }
+
+    .feature {
+        flex-basis: calc(100% / 4 - 30px);
+    }
 }
